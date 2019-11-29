@@ -1,0 +1,33 @@
+
+    .referals_wrapper{
+        h5{
+        color: #907090;
+        font-size: 16px;
+      }
+    }
+    
+    .share_now{
+      width: 100%;
+      height:35px;
+      margin-top:15px;
+      margin-bottom:5px;
+        .share_code{
+          padding: 5px 10px;
+        width:calc(100% - 200px);
+        float: left;
+        border:none;
+        color: #909090;
+        font-size:25px;
+        font-weight: 450;
+       }
+       p{
+        color: #909090;
+        font-size: 18px;
+        padding: 10px;
+       }
+      .share_now_button{
+        width:100px;
+        float: right;
+      }
+    }
+

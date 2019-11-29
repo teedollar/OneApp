@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="end" color="primary" (click)="closeModal()">
+     <ion-icon name="close"></ion-icon>
+    </ion-button>
+    <ion-title color="primary">Transfer to bank</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div class="transfer_wrapper">
+          
+        <h6 class="wallet_balance">Wallet Balance: {{ 500000 | currency:'NGN':'symbol-narrow':'4.2-2' }} </h6>
+          
+         <ion-item>
+          <ion-label position="stacked" >Amount to transfer</ion-label>
+	        <ion-input type="number" [(ngModel)]="amount"  placeholder ="000"> </ion-input>
+	    </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked" >Bank Name</ion-label>
+          <ion-select placeholder="Select One">
+            <ion-select-option value="f">MTN</ion-select-option>
+            <ion-select-option value="m">GLO</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+		<ion-item>
+          <ion-label position="stacked">Account Number</ion-label>
+        	<ion-input [(ngModel)]="accountNumber"  placeholder ="000"> </ion-input>
+        </ion-item>
+
+        <div *ngIf="newBeneficiary">
+
+	        <ion-item>
+	          <ion-label position="stacked">Save Beneficiary</ion-label>
+				<ion-checkbox color="primary" [(ngModel)]="beneficiary" (change)="saveBeneficiary()"  ></ion-checkbox>
+	        </ion-item>
+
+	        <ion-item>
+	          <ion-label position="stacked" >Select Beneficiary</ion-label>
+	          <ion-select placeholder="Select One">
+	            <ion-select-option value="f">ME</ion-select-option>
+	            <ion-select-option value="m">Us</ion-select-option>
+	          </ion-select>
+	        </ion-item>
+	    </div>
+
+    </div>
+  </ion-content>
+  <ion-footer padding>
+    <ion-button expand="full" >Transfer</ion-button>
+  </ion-footer>

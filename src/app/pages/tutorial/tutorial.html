@@ -1,0 +1,37 @@
+<ion-content class="tutorial_bg">
+  <div class="tutorial_button">
+        <button ion-button class="skip bottom_btn" [hidden]="!showSkip"  (click)="startApp()">Skip Tour</button>
+        <button ion-button class="continue bottom_btn" [hidden]="showSkip" (click)="startApp()">Continue</button>
+       </div>
+  <div class="tutorial_logo">
+        <!-- <img src="assets/img/logo.png"> -->
+        <img src="assets/img/oneApp.jpg">
+        
+    </div>
+    <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager="true">
+        <ion-slide>
+          <div class="tutorial_wrapper">
+            <div class="tutorial_content">
+                <img src="assets/img/landing1.png">
+                <p><strong></strong> Mobile Recharge, Electricity Bill payment, Data Top up, Cabel TV Subscription</p>
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="tutorial_wrapper">
+                <div class="tutorial_content">
+                    <img src="assets/img/landing2.png">
+                    <p><strong>OneApp </strong> gives you up to 5% cashback on Data and Airtime top up on every Purchases or Transactions.</p>
+                </div>
+              </div>
+        </ion-slide>
+        <ion-slide>
+            <div class="tutorial_wrapper">
+                <div class="tutorial_content">
+                    <img src="assets/img/landing3.png">
+                    <p>Become a premium <strong>OneApp </strong> member and save even more on every Purchase or Transaction.</p>
+                </div>
+              </div>
+        </ion-slide>
+      </ion-slides>
+</ion-content>

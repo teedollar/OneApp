@@ -1,0 +1,21 @@
+img {
+  max-width: 140px;
+  border-radius: 50%;
+}
+.profile_container{
+	width:100%;
+    height:200px;
+    background-color: var(--ion-color-primary);
+    padding:20px;
+    p{
+    	margin:0;
+    	text-align: left;
+    }
+
+.bio{
+  margin: 0;
+  padding: 5px;
+  padding-left: 30px;
+  background-color: var(-ion-color-primary) !important;
+}
+}

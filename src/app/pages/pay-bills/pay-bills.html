@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle> 
+        <img class="menu-img" src="assets/img/appicon.png">
+
+      </ion-menu-toggle>
+    </ion-buttons>
+
+    <ion-title color="primary" > <ion-badge slot="start">Add</ion-badge> My Balance: {{balance ? (balance | currency:'NGN':'symbol-narrow':'4.2-2') : 'xxxxx' }}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleShowBalance()">
+        <div *ngIf="showBalance==true; else showBalance">
+          <span>{{hideOrShow}}</span>
+        </div>
+        <ng-template #showBalance>
+          <span>{{hideOrShow}}</span>
+        </ng-template>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="airtime">
+      <ion-icon name="card"></ion-icon>
+      <ion-label>Airtime</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="data">
+      <ion-icon name="globe"></ion-icon>
+      <ion-label>Data</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="cable">
+      <ion-icon name="tv"></ion-icon>
+      <ion-label>Cable</ion-label>
+    </ion-tab-button>
+    
+    <ion-tab-button tab="electricity">
+      <ion-icon name="bulb"></ion-icon>
+      <ion-label>Electricity</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button>
+    <ion-menu-toggle color="primary"> 
+        <ion-icon name="grid" size="large"></ion-icon>
+        <ion-label><br>More</ion-label>
+      </ion-menu-toggle>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>

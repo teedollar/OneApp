@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" color="primary">
+      <ion-menu-button color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="primary">Refer and Earn</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="referals_wrapper">
+        <img src="assets/img/shareandearn.png">
+
+	    <div class="share_now">
+	    	<p> Below is your referal code. Copy and share with friends and family</p> 
+	        <div class="share_code"> GF8T92H <ion-icon name="copy" (click)="copyCode()" ></ion-icon></div>
+	        <ion-button class="share_now_button" (click)="shareCode()"> <ion-icon name="share"></ion-icon> </ion-button>
+	    </div>          
+    </div>
+
+</ion-content>

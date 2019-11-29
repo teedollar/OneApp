@@ -1,0 +1,100 @@
+<ion-content class="outer-content">
+  <h4>Cable Tv Sucbscription</h4>
+  <ion-list>
+    <ion-grid fixed>
+      <ion-row class="ion-align-items-stretch">
+        <ion-col size="12" >
+          
+          <form>
+             <ion-item>
+              <ion-label>Saved  </ion-label>
+            </ion-item>
+            <ion-item>
+               <ion-button> My Dstv
+                <ion-icon name="tv" slot="end"></ion-icon>
+              </ion-button>
+              <ion-button> Family House
+                <ion-icon name="Tv" slot="end"></ion-icon>
+              </ion-button>
+              <ion-button> Office
+                <ion-icon name="Tv" slot="end"></ion-icon>
+              </ion-button>
+              <ion-button> MY GOTV
+                <ion-icon name="Tv" slot="end"></ion-icon>
+              </ion-button>
+
+              </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Smart Card Number</ion-label>
+              <ion-input type="number" placeholder="080312345678"></ion-input>
+              <ion-icon name="contact" size="large" slot="end"></ion-icon>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Choose Operator</ion-label>
+              <ion-select placeholder="Select One">
+                <ion-select-option value="f">GOTv</ion-select-option>
+                <ion-select-option value="m">Startimes</ion-select-option>
+                <ion-select-option value="m">DSTV</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+             <ion-item>
+              <ion-label>Choose Plan</ion-label>
+              <ion-select placeholder="Select One">
+                <ion-select-option value="f">GoTV Family GB @ 1590</ion-select-option>
+                <ion-select-option value="m">GLO</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+             <ion-item class="amount" >
+                <ion-label>Amount: </ion-label>
+                <ion-input type="number" placeholder="200" style="" ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-checkbox checked name="useBpBalance" slot="start" color="primary"></ion-checkbox>
+                <label position="stacked"> Use My OneApp Balance</label>
+              </ion-item>
+
+          </form>
+            <ion-item>
+                <ion-icon slot="end" color="primary" name="basket"></ion-icon>
+                <ion-label>Get upto 5% cashback <br /> 
+                  When you pay bills using your <br />
+                  OneApp Balance <br />
+                  <ion-button fill="outline" (click)="topUp()">Top Up Now </ion-button>
+                  </ion-label>
+              </ion-item>
+          <ion-list>
+            <ion-list-header>
+              Recent Transactions
+            </ion-list-header>
+
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="assets/img/vendors/gotv.png">
+              </ion-avatar>
+              <ion-label>
+                <h2>MTN TOP UP</h2>
+                <h3>Self</h3>
+                <p><span color="primary">Amount:</span> N400 <> <b>Cashback:</b> N8.00</p>
+              </ion-label>
+            </ion-item>
+
+            <ion-item>
+              <ion-avatar slot="start">
+                <img src="assets/img/vendors/startimes.jpg">
+              </ion-avatar>
+              <ion-label>
+                <h2>Airtel Top Up</h2>
+                <h3>Wifey</h3>
+                <p><span color="primary">Amount:</span> N1500 <> <b>Cashback:</b> N30.00</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" color="primary">
+      <ion-menu-button color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="primary">My Wallet</ion-title> 
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-card class="wallet-card">
+	  <ion-card-header>
+	    <ion-card-subtitle color="primary" >Wallet Balance  </ion-card-subtitle>
+	    <ion-card-title>{{ def_amount | currency:'NGN':'symbol-narrow':'4.2-2' }}</ion-card-title>
+	  </ion-card-header>
+
+	  <ion-card-content>
+	  	<h6>Enter amount to add to your wallet or withdraw</h6>
+	    <ion-input type="number" placeholder="5000" [(ngModel)]="amount" ></ion-input>
+	    <ion-button (click)="addMoney()"> Add Money </ion-button> <!-- <ion-button (click)="WithdrawMoney()"> Withdraw Money </ion-button> -->
+	  </ion-card-content>
+	</ion-card>
+
+
+    <div class="wallet_transactions">
+    	<h4>Recent Transactions</h4>
+        <div class="wallet_trnx_tab">
+            <ul>
+                <li [class.active]="transaction == 'all'" (click)="transactionType('all')">All
+                    <hr>
+                </li>
+                <li [class.active]="transaction == 'credit'" (click)="transactionType('credit')">Credit
+                    <hr>
+                </li>
+                <li [class.active]="transaction == 'debit'" (click)="transactionType('debit')">Debit
+                    <hr>
+                </li>
+            </ul>
+        </div>
+        <div class="wallet_trnx_content " [hidden]="transaction !='all'">
+            <ion-list>
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-down" color="success" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N5,000.00</h2>
+		            <h3>Wallet Balance Top up</h3>
+		            <p>05/08/2019 05:59PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N1,000.00</h2>
+		            <h3>MTN 2GB Data Purchase</h3>
+		            <p>04/08/2019 11:19PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N500.00</h2>
+		            <h3>MTN Airtime Purchase</h3>
+		            <p>04/08/2019 05:59PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N2,000.00</h2>
+		            <h3>Airtel 4.5GB Data Purchase</h3>
+		            <p>04/08/2019 10:32AM</p>
+		          </ion-label>
+		        </ion-item>
+		    </ion-list>
+        </div>
+        <div class="wallet_trnx_content" [hidden]="transaction !='credit'">
+            <ion-list>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-down" color="success" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N5,000.00</h2>
+		            <h3>Wallet Balance Top up</h3>
+		            <p>05/08/2019 05:59PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-down" color="success" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N15,000.00</h2>
+		            <h3>Transfer Recieved from Smith</h3>
+		            <p>05/01/2019 10:52AM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-down" color="success" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N1,000.00</h2>
+		            <h3>Wallet Balance Top up</h3>
+		            <p>01/08/2019 01:19PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-down" color="success" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N500.00</h2>
+		            <h3>Wallet Balance Top up</h3>
+		            <p>01/08/2019 08:23PM</p>
+		          </ion-label>
+		        </ion-item>
+		      </ion-list>
+        </div>
+        <div class="wallet_trnx_content" [hidden]="transaction !='debit'">
+            <ion-list>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label> 
+		          	<h2>N3,000.00</h2>
+		            <h3>Transfer to Jane</h3>
+		            <p>06/08/2019 12:17PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N1,000.00</h2>
+		            <h3>MTN 2GB Data Purchase</h3>
+		            <p>04/08/2019 11:19PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N500.00</h2>
+		            <h3>MTN Airtime Purchase</h3>
+		            <p>04/08/2019 05:59PM</p>
+		          </ion-label>
+		        </ion-item>
+
+		        <ion-item>
+		          <ion-avatar slot="start">
+		            <ion-icon name="arrow-round-up" color="danger" size="large"></ion-icon>
+		          </ion-avatar>
+		          <ion-label>
+		            <h2>N2,000.00</h2>
+		            <h3>Airtel 4.5GB Data Purchase</h3>
+		            <p>04/08/2019 10:32AM</p>
+		          </ion-label>
+		        </ion-item>
+		      </ion-list>
+        </div>
+    </div>
+</ion-content>

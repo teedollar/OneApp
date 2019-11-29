@@ -1,0 +1,7 @@
+{
+  "name": "bills-padi-app",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

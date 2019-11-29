@@ -1,0 +1,103 @@
+/*
+  Site Name: NoveroApp
+  URI: http:
+  Description: This is the theme css for NoveroApp
+  Version: 0.1
+  Author: Amal-Techware Solution
+  Author URI:
+  Tags:
+
+  ---------------------------
+  THEME STYLES
+  ---------------------------
+
+  TABLE OF CONTENTS
+  ---------------------------
+   01. FONTS-N-SIZES
+   02. FONTS-COLOR
+   03. THEMES-N-BACKGROUNDS
+   04. SPACING-N-POSITIONS
+   05. ALIGMENTS
+   06. ALERTS-N-MESSAGES
+   07. BODY-STRUCTURE
+   08. OVERWRITTEN
+
+
+*/
+
+
+/*-------------------------------
+
+06. ALERTS-N-MESSAGES
+
+--------------------------------*/
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    position: fixed;
+    border-bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.warning {
+    color: #fff;
+    background-color: #8a6d3b;
+}
+
+.success {
+    color: #fff;
+    background-color: #3c763d;
+}
+
+.error {
+    color: #fff;
+    background-color: #a94442;
+}
+
+
+/*-------------------------------
+
+07. BODY-STRUCTURE
+
+--------------------------------*/
+
+
+
+ion-menu-toggle img {
+  max-width: 50px;
+}
+
+.scroll {
+  background: #ededed;
+}
+ion-item {
+  --border-color: var(--ion-color-primary);
+}
+
+.amount{
+  max-width: 160px !important;
+  margin: 5px auto; 
+    --border-color: #fff;
+
+}
+
+.menu-img{
+  width: 40px;
+  border-radius: 50%;
+}
+.outer-content{
+  margin-top: 100px;
+  h4{
+    margin-top: 50px;
+      color: var(--ion-color-primary);
+      text-align: center;
+      background: #ad2a86;
+      padding: 10px 0;
+      color: #fff;
+  }
+}
